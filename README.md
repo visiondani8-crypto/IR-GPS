@@ -5,6 +5,26 @@ Give it a foothold and it plots the attacker's fastest routes to your crown jewe
 
 Zero dependencies. No build step. It runs entirely in the browser, so no incident data leaves your machine.
 
+![The Navigator: attack map, breach ETA with a likely range, and turn-by-turn route](docs/screenshots/navigator.png)
+
+## Screenshots
+
+**Reroute like a GPS.** Switch on three controls and the route, ETA and range recalculate: 15 min becomes 27 min, and the likely range widens to 14 min – 1 h 58 m.
+
+![What-if controls recalculating the route and ETA](docs/screenshots/navigator-what-if.png)
+
+| | |
+|---|---|
+| **Dashboard.** ETA projection, breach-time histogram, and what drives the ETA.<br>![Dashboard](docs/screenshots/dashboard.png) | **Why this number?** Every step explains its estimate, spread and evidence.<br>![Why this number](docs/screenshots/why-this-number.png) |
+| **Validation.** The model replayed against six documented intrusions, labelled anecdotal.<br>![Validation](docs/screenshots/validation.png) | **Calibration.** Turn your own timings into fitted values, with the prior kept for an exact undo.<br>![Calibration](docs/screenshots/calibration.png) |
+| **Posture.** Control coverage across the predicted attack paths.<br>![Posture](docs/screenshots/posture.png) | **Hunt.** Where to look, what to look for, and starter queries per technique.<br>![Hunt](docs/screenshots/hunt.png) |
+| **Playbooks.** NIST-aligned steps with roles, checked off live.<br>![Playbooks](docs/screenshots/playbooks.png) | **Incidents.** Register, regulatory clocks and snapshots.<br>![Incidents](docs/screenshots/incidents.png) |
+| **Reports.** Incident report, executive summary and CSV exports.<br>![Reports](docs/screenshots/reports.png) | **Light theme and mobile.**<br>![Light theme](docs/screenshots/navigator-light.png) |
+
+<p align="center"><img src="docs/screenshots/navigator-mobile.png" alt="Navigator on a phone" width="260"></p>
+
+The images are generated from the real app, so they stay accurate: `python3 tests/e2e/screenshots.py file://$PWD/index.html docs/screenshots`.
+
 ## Screens
 
 | Screen | What it does |
