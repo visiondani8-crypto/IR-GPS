@@ -1,0 +1,6 @@
+node_modules/
+dist/
+__pycache__/
+*.pyc
+tests/e2e/*.png
+.DS_Store

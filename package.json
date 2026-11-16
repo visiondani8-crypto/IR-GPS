@@ -1,0 +1,13 @@
+{
+  "name": "ir-gps",
+  "version": "2.1.0",
+  "description": "A GPS for incident response: predict attacker routes to crown jewels, get a breach ETA, and reroute as you contain.",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "test": "node tests/engine.test.js && node tests/uncertainty.test.js && node tests/calibration.test.js && node tests/validation.test.js",
+    "bundle": "node scripts/bundle.js",
+    "e2e": "python3 tests/e2e/e2e.py file://$PWD/index.html",
+    "start": "npx serve ."
+  }
+}
