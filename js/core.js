@@ -70,6 +70,7 @@
   // ---------- scenario / state ----------
   Core.startScenario = function (i) {
     Core.stop();
+    Core.banner = null; // a breach or containment banner belongs to the run that just ended
     var env = Core.env;
     Core.scnIdx = Math.max(0, Math.min(i, env.scenarios.length - 1));
     var scn = env.scenarios[Core.scnIdx];

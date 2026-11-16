@@ -58,6 +58,9 @@ with sync_playwright() as p:
     check('breach replaces the range with BREACHED', 'breached' in T('#eta') and pg.locator('#uncBox').count() == 0, T('#eta'))
     pg.click('[data-act="reset"]'); pg.wait_for_timeout(300)
     check('reset brings the range back', pg.locator('#uncBox').count() == 1)
+    check('reset clears the old breach banner', not pg.locator('#banner.show').count(), pg.evaluate("document.getElementById('banner').className"))
+    pg.goto(url + '#dashboard'); pg.wait_for_timeout(200); pg.goto(url + '#navigator'); pg.wait_for_timeout(300)
+    check('banner stays cleared after leaving and returning', not pg.locator('#banner.show').count())
 
     # ---- assets: paths evidence + calibration
     pg.click('a[href="#assets"]'); pg.wait_for_timeout(300)
